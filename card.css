@@ -1,0 +1,140 @@
+* {
+  box-sizing: border-box;
+}
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 0 10px; 
+  margin-bottom: 50px;
+
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {margin-left: 5%;
+
+ }
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  float: left;
+  display: flex;
+  margin-top: 10px;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+
+.heading
+{
+	text-align: center;
+	font-size: 50px;
+	margin-top: 1px;
+	padding: 15px;
+	color: #f99806;
+	background:#ffffcc;
+}
+
+
+.card-body button[type="submit"]:hover {background-color: #ffc61a;}
+
+.card-body button[type="submit"] {
+   background-color: #f1f1f1;
+  color: black;
+  border: 2px solid #ffc61a;
+  border-radius: 10px;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.card-body p button a
+{
+	text-decoration: none;
+}
+
+/*my cart*/
+.cart button[type="submit"]:hover {background-color: #ffc61a;}
+
+.cart button[type="submit"] {
+   background-color: white;
+  color: black;
+  border: 2px solid #ffc61a;
+  border-radius: 10px;
+  padding: 5px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 100px 20px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-left: 35px;
+  
+}
+
+
+.cart
+{
+   margin-left: auto;
+  margin-right: auto;
+  display: flex;
+}
+
+
+.cart-left
+{
+   flex-direction: left;
+     margin-left: 70px;
+}
+
+#prodImg
+{
+  width: 200px;
+  height: 150px;
+}
+
+.border
+{
+  border: 1px solid black;
+  flex-flow: row wrap;
+  width: 100%;
+  margin-top: 10px;
+  height: 310px;
+}
+
+.border p
+{
+  text-align: center;
+}
+
+
+.cart-right
+{
+  flex-direction: right;
+  margin: auto;
+}

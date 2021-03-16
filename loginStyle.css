@@ -1,0 +1,113 @@
+
+#head-login
+{
+	font-size: 40px;
+	color: #f99806;
+}
+
+.header-login
+{
+  margin-top: 10px;
+  border: none;
+  background: #f2f2f2; 
+  padding: 60px;
+  border-radius: 25px;
+  margin-left: 30%;
+  margin-right: 30%;
+}
+
+.header-login input[type="text"],input[type="password"]
+{
+   width: 90%;
+  padding: 20px 20px;
+  margin: 14px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+
+}
+
+.header-login button[type="submit"]
+{
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header-login a
+{
+  color:  #f99806;
+  text-decoration: underline;
+  font-size: 20px;
+}
+
+.login-status
+{
+	color:  #f99806;
+	font-size: 15px;
+	margin-top: -20px;
+	text-align: center;
+}
+.signup
+{
+  margin-top: 10px;
+  border: none;
+  background: #f2f2f2; 
+  padding: 30px;
+  border-radius: 25px;
+  margin-left: 30%;
+  margin-right: 30%;
+}
+
+.signup-form input[type="text"],input[type="password"]
+{
+   width: 90%;
+  padding: 20px 20px;
+  margin: 14px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.signup-form button[type="submit"]
+{
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  
+}
+
+#head-signup
+{
+	font-size: 40px;
+	color: #f99806;
+}
+
+.signuperror
+{
+	color: red;
+	font-size: 18px;
+}
+
+.signupsuccess
+{
+	color: #4CAF50;
+	font-size: 18px;
+}
+
+.signup-login
+{
+  text-align: center;
+}
