@@ -22,9 +22,9 @@ mysqli_select_db($con, 'product');
 //{
 //	echo "no connection";
 //}
-$query="SELECT `Image`, `Name`, `Price` FROM `bangle` ORDER BY id ASC ";
+$query="SELECT `Id`,`Image`, `Name`, `Price`,`Details` FROM `bangle` ORDER BY id ASC ";
 $queryfire=mysqli_query($con, $query);
-
+$id=0;
 $num=mysqli_num_rows($queryfire);
 if ($num>0) {
 	while ($product1=mysqli_fetch_array($queryfire)) {
@@ -58,7 +58,8 @@ if ($num>0) {
             <p class="text">
            <?php 
            if (isset($_SESSION['userId'])) {
-          echo '<button type="submit" class="view4">Add to cart &nbsp;<i class="fa fa-shopping-cart" aria-hidden="true"></i></button>';
+          echo '<button type="submit" class="view4" name="add">Add to cart &nbsp;<i class="fa fa-shopping-cart" aria-hidden="true"></i></button>';
+           echo '<input type="hidden" name="product_id" value="' .$product1['Id'].'"> ';
           }
           ?>
             </p>
@@ -76,6 +77,35 @@ if ($num>0) {
 ?>
  </div>
 
+<!-- add to cart -->
+<?php
+if (isset($_POST['add'])) 
+{
+  $id=$_POST['product_id'];
+
+}
+
+
+$query1="SELECT `Id`,`Image`, `Name`, `Price`,`Details` FROM `bangle` WHERE Id=$id";
+$queryfire1=mysqli_query($con, $query1);
+$num1=mysqli_num_rows($queryfire1);
+if ($num1>0)
+{
+$product2=mysqli_fetch_array($queryfire1);
+$query2= "INSERT INTO `cart`(`Image`, `Name`, `Price`, `Details`, `User`) VALUES ('".$product2['Image']."','".$product2['Name']."','".$product2['Price']."','".$product2['Details']."','".$_SESSION['userId']."')";
+            $queryfire2=mysqli_query($con, $query2);
+
+}
+if (isset($_SESSION['userId'])) 
+{
+$count="SELECT * FROM cart WHERE User='".$_SESSION['userId']."'";
+      $queryfire3=mysqli_query($con, $count);
+$num2=mysqli_num_rows($queryfire3);
+$_SESSION['cnt']=$num2;
+}
+
+
+?>
 
 
 

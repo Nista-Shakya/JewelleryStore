@@ -76,65 +76,14 @@
 	text-decoration: none;
 }
 
-/*my cart*/
-.cart button[type="submit"]:hover {background-color: #ffc61a;}
-
-.cart button[type="submit"] {
-   background-color: white;
+.card-body p button a:link
+{
   color: black;
-  border: 2px solid #ffc61a;
-  border-radius: 10px;
-  padding: 5px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 100px 20px;
-  transition-duration: 0.4s;
-  cursor: pointer;
-  margin-top: 10px;
-  margin-left: 35px;
-  
 }
 
-
-.cart
+.card-body p button a:visited
 {
-   margin-left: auto;
-  margin-right: auto;
-  display: flex;
+  color: black;
 }
 
 
-.cart-left
-{
-   flex-direction: left;
-     margin-left: 70px;
-}
-
-#prodImg
-{
-  width: 200px;
-  height: 150px;
-}
-
-.border
-{
-  border: 1px solid black;
-  flex-flow: row wrap;
-  width: 100%;
-  margin-top: 10px;
-  height: 310px;
-}
-
-.border p
-{
-  text-align: center;
-}
-
-
-.cart-right
-{
-  flex-direction: right;
-  margin: auto;
-}
