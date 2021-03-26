@@ -38,11 +38,12 @@ echo 'error';
     <p class="des"><?php echo "$details";?></p>
 
     <p class="price">NPR <?php echo "$price"; ?></p>
-     	 <?php 
-        	 if (isset($_SESSION['userId'])) {
-        	echo '<button type="submit" class="view4">Add to cart &nbsp;<i class="fa fa-shopping-cart" aria-hidden="true"></i></button>';
-        	}
-        	?>
+     
 	</div>
 
 </div>
+
+<?php
+  include 'footer.php';
+?>
+<script src="javascript.js"></script>
